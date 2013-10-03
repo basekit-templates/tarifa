@@ -1,0 +1,39 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="bk-pt-gallery">
+
+
+<div class="header-wrapper clearfix">
+<header>
+    <div class="wrapper clearfix">
+        {{widget('extendednavigation', 'navigationheader', {})|raw}}
+        {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+        {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+    </div>
+</header>
+</div>
+
+<div class="slideshow-wrapper">
+  {{widget('responsiveslideshow', 'responsiveslideshow', {'duration':'3', 'transSpeed': '1000', 'transType': 'fade', 'showButtons': 'false', 'showBullets': 'false', 'allowPause': 'false', 'allowLoop': 'true', showDescription: 0, showTitle: 0, 'images':[{'imageHeight':'350', 'imageWidth':'300', 'url':'http://placehold.it/350x300', 'title':'test title', 'description': 'test desc'},{'imageHeight':'350', 'imageWidth':'300', 'url':'http://placehold.it/350x300', 'title':'test title', 'description': 'test desc'},{'imageHeight':'350', 'imageWidth':'300', 'url':'http://placehold.it/350x300', 'title':'test title', 'description': 'test desc'},{'imageHeight':'350', 'imageWidth':'300', 'url':'http://placehold.it/350x300', 'title':'test title', 'description': 'test desc'}]})|raw}}
+</div>
+
+<div class="canvas">
+<div class="main wrapper clearfix">
+    {{zone('main')|raw}}
+</div>  
+</div>
+
+<footer>
+    <div class="wrapper clearfix">    
+        {{widget('profile', 'footercolumn1socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}     
+        {{widget('profile', 'footercolumn1profileEmail', { 'profileType':'email', 'email':'profile'})|raw}}
+        {{widget('profile', 'footercolumn1profilePhone', { 'profileType':'phone', 'phone':'profile'})|raw}} 
+    </div>
+</footer>
+
+</div>
+
+
+{% endblock %}
