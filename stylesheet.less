@@ -1,5 +1,5 @@
 body {
-    background-color: @color-swatch1;
+    background-color: @color-swatch7;
     margin: 0;
     padding: 0;
 }
@@ -140,10 +140,6 @@ ul, ol, li {
 
 .canvas  {
   background-color: @color-swatch1;
-  max-width: 1200px;
-  width: 90%;
-  margin: 0 auto;
-  padding: 0px;
 }
 
 .main {
@@ -395,6 +391,9 @@ header {
    HOMEPAGE SLIDESHOW WIDGET
    =============================== */
 
+
+
+
     .slideshow-wrapper {
       position: relative;
     }
@@ -429,6 +428,7 @@ header {
 
     .slideshow-wrapper .widget.responsiveslideshow .image-wrapper {
         padding:0;
+        background-color: @color-swatch1;
     }
 
     .slideshow-wrapper .widget.responsiveslideshow .crop .image-wrapper {
@@ -566,7 +566,7 @@ header {
 footer {
     background-color: @color-swatch7;
     padding: 2em 0;
-    margin-top: 3em;
+    margin-top: 0;
     color: @color-swatch1;
     text-align: center;
 }
@@ -631,7 +631,8 @@ footer h4 {
 .widget.extendednavigation {
     float: right;
     position: relative;
-    margin: 4px 0;
+    margin: 0;
+
 }
 
 .widget.extendednavigation a.pull {
@@ -768,6 +769,8 @@ footer h4 {
 /* ===============================
    FEATURE
    =============================== */
+
+
 
 .widget.feature .feature-bgimg {
   height: 900px; 
@@ -2021,6 +2024,10 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
 
     /* HOMEPAGE SLIDESHOW WIDGET */
 
+    .slideshow-wrapper .bk-overlay {
+        height: 494px;
+      }
+
     .slideshow-wrapper {
       position: relative;
       top: -86px;
@@ -2038,8 +2045,19 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
     .widget.extendednavigation {
         display: block;
         width: 100%;
-        margin: 0px;
+        margin-top: 0px;
+        float: right;
     }
+
+
+    .widget.extendednavigation .bk-overlay{
+        height: 85px;
+        width: 200px; 
+        right: 0px;
+        left: 90% !important;
+    }
+
+
 
      /* NAV ICON */
 
@@ -2047,7 +2065,7 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
     display: block;
     width: 100%;
     position: absolute;
-    bottom: -83px;
+    bottom: -31px;
   }
 
     .widget .extendednavigation a.pull:after {
@@ -2058,7 +2076,7 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
     display: inline-block;
     position: absolute;
     right: 0;
-    top: -50px;
+    top: 0;
   }
 
   /* NAV */
@@ -2091,6 +2109,10 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
 
   .widget.extendednavigation ul li.folder {
     padding: 16px 0;
+  }
+
+   .widget.extendednavigation ul li.folder:hover {
+    padding: 16px 0 0;
   }
 
   .widget .extendednavigation li {
@@ -2240,6 +2262,10 @@ blockquote {
 
 /* HOMEPAGE SLIDESHOW WIDGET */
 
+    .slideshow-wrapper .bk-overlay {
+      height: 206px;
+    }
+
      .slideshow-wrapper {
       top: 0;
     }
@@ -2253,6 +2279,12 @@ blockquote {
 
 
 /* NAV */
+
+
+
+ .widget.extendednavigation .bk-overlay{
+      left: 80% !important;
+  }
 
     .widget.extendednavigation ul li:last-child {
     border-bottom: 1px solid @color-swatch6;
