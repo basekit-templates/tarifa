@@ -1,3 +1,6 @@
+@import templatecommon('/paypal.less');
+@import templatecommon('/dropbox.less');
+
 body {
     background-color: @color-swatch7;
     margin: 0;
@@ -967,6 +970,37 @@ footer h4 {
     font-size: @font-swatch5-font-size;
     line-height: @font-swatch5-line-height;
     color: @font-swatch5-color;
+}
+
+/* ===============================
+   DROPBOX BUTTON
+   =============================== */
+
+
+.widget.dropbox .b-wrap .btn {
+  margin: 0;
+  padding: 15px 22px 15px 45px;
+  background-image: image('/images/dropbox-icon.png');
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 19px center;
+  border: 2px solid @color-swatch7;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+  font-family: @font-swatch7-font-family;
+  font-size: @font-swatch7-font-size;
+  font-weight:@font-swatch7-font-weight;
+  background-color: @font-swatch7-background-color;
+  color: @font-swatch7-color;
+  text-decoration: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.widget.dropbox .b-wrap .btn:hover {
+  background-color: @font-swatch7-background-color-hover;
+  cursor: pointer;
+  border: 2px solid @color-swatch3;
 }
 
 
