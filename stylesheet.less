@@ -1,8 +1,8 @@
-@import templatecommon('/paypal.less');
-@import templatecommon('/dropbox.less');
+@import "@{templateCommon}/paypal.less";
+@import "@{templateCommon}/dropbox.less";
 
 body {
-    background-color: @color-swatch7;
+    background-color: @color-swatch1;
     margin: 0;
     padding: 0;
 }
@@ -141,9 +141,6 @@ ul, ol, li {
    CUSTOM CSS
    =============================== */
 
-.canvas  {
-  background-color: @color-swatch1;
-}
 
 .main {
   padding: 90px 0px;
@@ -449,7 +446,7 @@ header {
 
     .slideshow-wrapper .widget.responsiveslideshow .image-wrapper {
         padding:0;
-        background-color: @color-swatch1;
+        background-color: transparent;
     }
 
     .slideshow-wrapper .widget.responsiveslideshow .crop .image-wrapper {
@@ -475,7 +472,6 @@ header {
         line-height:bkscale(@font-swatch5-line-height, 0.9);
         color: @color-swatch7;
         letter-spacing: @font-swatch5-letter-spacing;
-        font-style: italic;
     }
 
     .slideshow-wrapper .widget.responsiveslideshow .description {
@@ -487,7 +483,6 @@ header {
         line-height:bkscale(@font-swatch5-line-height, 0.9);
         letter-spacing: @font-swatch5-letter-spacing;
         color: @color-swatch7;
-        font-style: italic;
     }
 
     .slideshow-wrapper .widget.responsiveslideshow .slideshow-widget .btn-prev, 
@@ -700,7 +695,6 @@ footer h4 {
     color: @font-swatch6-color;
     line-height: @font-swatch6-line-height;
     letter-spacing: @font-swatch6-letter-spacing;
-    text-transform: uppercase;
 }
 
 .widget.extendednavigation ul li.folder .text {
@@ -712,7 +706,6 @@ footer h4 {
     color: @font-swatch6-color;
     line-height: @font-swatch6-line-height;
     letter-spacing: @font-swatch6-letter-spacing;
-    text-transform: uppercase;
   }
 
 .widget.extendednavigation ul li a:hover,
@@ -1003,7 +996,6 @@ footer h4 {
   background-repeat: no-repeat;
   background-position: 19px center;
   border: 2px solid @color-swatch7;
-  text-transform: uppercase;
   margin: 0 0 10px;
   font-family: @font-swatch7-font-family;
   font-size: @font-swatch7-font-size;
@@ -1035,7 +1027,6 @@ footer h4 {
   background-repeat: no-repeat;
   background-position: 19px center;
   border: 2px solid @color-swatch7;
-  text-transform: uppercase;
   margin: 0 0 10px;
   font-family: @font-swatch7-font-family;
   font-size: @font-swatch7-font-size;
@@ -1062,7 +1053,6 @@ footer h4 {
 {
   padding: 15px 17px;
   border: 2px solid @color-swatch7;
-  text-transform: uppercase;
   margin: 0 0 10px;
   font-family: @font-swatch7-font-family;
   font-size: @font-swatch7-font-size;
@@ -1348,7 +1338,6 @@ hr.line.align-right {
 .widget.twitter .twitter-content span.bk-full-name {
     font-family: @font-swatch5-font-family;
     color: @color-swatch3;
-    text-transform: uppercase;
 }
 
 .widget.twitter .twitter-content span.bk-full-name:hover {
@@ -1437,7 +1426,6 @@ hr.line.align-right {
 .widget.contactform fieldset button.btn {
     padding: 15px 17px;
     border: 2px solid @color-swatch7;
-    text-transform: uppercase;
     margin: 0;
     font-family: @font-swatch7-font-family;
     font-size: @font-swatch7-font-size;
@@ -1738,7 +1726,6 @@ hr.line.align-right {
 .widget.profile .twitter .twitter-content span.bk-full-name {
     font-family: @font-swatch5-font-family;
     color: @color-swatch1;
-    text-transform: uppercase;
 }
 
 .widget.profile .twitter .twitter-content p {
@@ -1803,7 +1790,6 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
 .widget.profile fieldset button.btn {
     padding: 15px 17px;
     border: 2px solid @color-swatch7;
-    text-transform: uppercase;
     margin: 0;
     font-family: @font-swatch7-font-family;
     font-size: @font-swatch7-font-size;
@@ -1898,7 +1884,6 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
 .widget.signupform fieldset button.btn {
     padding: 15px 17px;
     border: 2px solid @color-swatch7;
-    text-transform: uppercase;
     margin: 0;
     background-color: lighten(@color-swatch5,30%);
     font-family: @font-swatch7-font-family;
@@ -1956,7 +1941,6 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
     font-weight: @font-swatch5-font-weight;
     line-height:bkscale(@font-swatch5-line-height, 0.9);
     color: @color-swatch7;
-    font-style: italic;
     letter-spacing: @font-swatch5-letter-spacing;
 }
 
@@ -1969,7 +1953,6 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
     line-height:bkscale(@font-swatch5-line-height, 0.9);
     letter-spacing: @font-swatch5-letter-spacing;
     color: @color-swatch7;
-    font-style: italic;
 }
 
 .widget.responsiveslideshow .slideshow-widget .btn-prev, 
@@ -2417,7 +2400,6 @@ blockquote {
   padding: 20px 20px 20px 47px;
   margin: 2.2em auto;
   border: 2px solid @color-swatch7;
-  text-transform: uppercase;
   margin: 0 0 10px;
   font-family: @font-swatch7-font-family;
   font-size: @font-swatch7-font-size;
