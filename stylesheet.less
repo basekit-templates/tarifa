@@ -161,15 +161,12 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 
 /* DEFAULT PAGE TYPE */
 
- .bk-pt-default header {
-        margin: 0;
-        border-bottom: 0;
-    }
 
 .bk-pt-default header {
     background-color: @color-swatch7;
     padding: 25px 0 18px;
     margin: 0;
+    border-bottom: 0;
 }
 
 
@@ -201,6 +198,12 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 
  /* DEFAULT PAGE - NAV */
 
+   .bk-pt-default .widget .extendednavigation {
+          max-width: 100%;
+          position: static;
+          float: none;
+    }
+
 
     .bk-pt-default .widget.extendednavigation {
         display: block;
@@ -213,7 +216,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
     display: block;
     width: 100%;
     position: absolute;
-    bottom: -83px;
+    top: 80px;
   }
 
    .bk-pt-default .widget .extendednavigation a.pull:after {
@@ -733,7 +736,7 @@ footer h4 {
     display: none
 }
 
-.widget.extendednavigation li:hover > ul {
+.widget .extendednavigation ul li:hover ul {
     display: block;
     position: absolute;
     min-width: 200px;
@@ -1366,12 +1369,12 @@ hr.line.align-right {
     background-color: @color-swatch1;
 }
 
-.widget.contactform fieldset {
+.widget.contactform form fieldset {
     border: none;
     padding: 0;
 }
 
-.widget.contactform fieldset label {
+.widget.contactform form fieldset label {
     width: 100%;
     float: left;
     font-family:@font-swatch5-font-family;
@@ -1382,7 +1385,7 @@ hr.line.align-right {
     letter-spacing: @font-swatch5-letter-spacing;
 }
 
-.widget.contactform fieldset input {
+.widget.contactform form fieldset input {
     height: 40px;
     width: 100%;
     border: none;
@@ -1396,12 +1399,12 @@ hr.line.align-right {
     padding: 0;
 }
 
-.widget.contactform fieldset input:focus {
+.widget.contactform form fieldset input:focus {
     outline: none;
     box-shadow: 0 0 5px @color-swatch3;
 }
 
-.widget.contactform fieldset textarea {
+.widget.contactform form fieldset textarea {
     height: 100px;
     width: 100%;
     border: none;
@@ -1417,12 +1420,12 @@ hr.line.align-right {
     padding: 0;
 }
 
-.widget.contactform fieldset textarea:focus {
+.widget.contactform form fieldset textarea:focus {
     outline: none;
     box-shadow: 0 0 5px @color-swatch3;
 }
 
-.widget.contactform fieldset button.btn {
+.widget.contactform form fieldset button.btn {
     padding: 15px 17px;
     border: 2px solid @color-swatch7;
     margin: 0;
@@ -1435,33 +1438,33 @@ hr.line.align-right {
     letter-spacing: 1px;
 }
   
-.widget.contactform fieldset button.btn:hover {
+.widget.contactform form fieldset button.btn:hover {
   background-color: @font-swatch7-background-color-hover;
   border: 2px solid @color-swatch3;
   cursor: pointer;
 }
 
-.widget.contactform fieldset button.btn.justifyleft {
+.widget.contactform form fieldset button.btn.justifyleft {
     text-align: left
 }
 
-.widget.contactform fieldset button.btn.justifycenter {
+.widget.contactform form fieldset button.btn.justifycenter {
     text-align: center
 }
 
-.widget.contactform fieldset button.btn.justifyright {
+.widget.contactform form fieldset button.btn.justifyright {
     text-align: right
 }
 
-.widget.contactform fieldset button.btn.justifyfull {
+.widget.contactform form fieldset button.btn.justifyfull {
     text-align: justify
 }
 
-.widget.contactform fieldset button.btn.italic {
+.widget.contactform form fieldset button.btn.italic {
     font-style: italic
 }
 
-.widget.contactform fieldset button.btn.bold {
+.widget.contactform form fieldset button.btn.bold {
     font-weight: bold
 }
 
@@ -1506,12 +1509,12 @@ hr.line.align-right {
 }
 
 .widget.tweet a {
-  padding: 20px 22px 20px 45px;
-  background-image: image('/images/twitter.png');
+  padding: 15px 22px 15px 54px;
+  background-image: image('/images/tweet.png');
   background-repeat: no-repeat;
   background-position: 20px center;
   margin: 2.2em auto;
-  border: 0;
+  border: 2px solid @color-swatch7;
   font-family: @font-swatch7-font-family;
   font-size: @font-swatch7-font-size;
   font-weight:@font-swatch7-font-weight;
@@ -1524,6 +1527,8 @@ hr.line.align-right {
 .widget.tweet a:hover, .tweet a:active {
   cursor: pointer;
   background-color: @font-swatch7-background-color-hover;
+  background-image: image('/images/tweet.png');
+  border: 2px solid @color-swatch3;
 }
 
 
@@ -1574,8 +1579,8 @@ hr.line.align-right {
     font-family:@font-swatch7-font-family;
 }
 
-.widget.profile .bk-profile-socialicons span a {
-  display: inline-block;
+footer .widget.profile .bk-profile-socialicons span a {
+    display: inline-block;
     text-decoration: none;
     text-indent: -9999px;
     white-space: nowrap;
@@ -1589,9 +1594,10 @@ hr.line.align-right {
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     border-radius: 50px;
+    background-color: transparent;
 }
 
-.widget.profile .bk-profile-socialicons span a:hover {
+footer .widget.profile .bk-profile-socialicons span a:hover {
   background-color: darken(@color-swatch7,5%);
 }
 
@@ -2030,6 +2036,9 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
       box-shadow: 0 3px 4px hsla(hue(@color-swatch7), saturation(@color-swatch7), lightness(darken(@color-swatch7,30%)), 0.2);
     }
 
+    .bk-pt-default .widget.logo, .bk-pt-default .widget.companyname {
+      margin-top: 0;
+    }
 
     .widget.logo {
       padding-top: 27px;
@@ -2073,6 +2082,11 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
        width: 100%;
     }
 
+    .slideshow-wrapper .widget.responsiveslideshow .slideshow-image-list {
+          height:496px;
+    }
+
+
 
     /* NAV */
 
@@ -2100,10 +2114,11 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
     display: block;
     width: 100%;
     position: absolute;
-    bottom: -31px;
+    bottom: 0;
+    top: 32px;
   }
 
-    .widget .extendednavigation a.pull:after {
+  .widget .extendednavigation a.pull:after {
     content:"";
     background: image('/images/nav-icon.png') no-repeat;
     width: 30px;
@@ -2171,7 +2186,7 @@ footer .widget.profile .twitter span, .widget.profile .twitter span a {
       margin: 16px 0 0;
       padding: 0;
       background-color: hsla(hue(@color-swatch7), saturation(@color-swatch7), lightness(lighten(@color-swatch7,10%)), 0.4); 
-
+      position: relative;
   }
 
   .widget.extendednavigation ul li:hover > ul > li {
