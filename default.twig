@@ -5,9 +5,9 @@
 <div class="bk-pt-default">
 
 <div class="header-wrapper clearfix">
-<header>
+<header class="bk-header">
     <div class="wrapper clearfix">
-        {{widget('extendednavigation', 'navigationheader', {})|raw}} 
+        {{widget('extendednavigation', 'navigationheader', {})|raw}}
         {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
         {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
 
@@ -19,14 +19,14 @@
 <div class="canvas">
 <div class="main wrapper clearfix">
     {{zone('main')|raw}}
-</div>  
+</div>
 </div>
 
-<footer>
-    <div class="wrapper clearfix">    
-        {{widget('profile', 'footercolumn1socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}     
+<footer class="bk-footer">
+    <div class="wrapper clearfix">
+        {{widget('profile', 'footercolumn1socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
         {{widget('profile', 'footercolumn1profileEmail', { 'profileType':'email', 'email':'profile'})|raw}}
-        {{widget('profile', 'footercolumn1profilePhone', { 'profileType':'phone', 'phone':'profile'})|raw}} 
+        {{widget('profile', 'footercolumn1profilePhone', { 'profileType':'phone', 'phone':'profile'})|raw}}
     </div>
 </footer>
 
