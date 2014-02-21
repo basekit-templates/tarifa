@@ -2,12 +2,17 @@
 
 {% block content %}
 
-	<div class="canvas menu-page">
-		<div class="main wrapper clearfix">
-			{{widget('menusections', 'menusections1', {})|raw}}
-			{{widget('menu', 'menu1', {})|raw}}
-			{{zone('main')|raw}}
+	<div class="bk-pt-default">
+	
+		{% include "header.twig" %}
+	
+		<div class="canvas menu-page">
+			<div class="main wrapper clearfix">
+				{{widget('menusections', 'menusections1', {})|raw}}
+				{{widget('menu', 'menu1', {})|raw}}
+			</div>
 		</div>
+	
 	</div>
 
 {% endblock %}

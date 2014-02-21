@@ -2,10 +2,16 @@
 
 {% block content %}
 
-<div class="canvas blogpost-page">
-	<div class="main wrapper clearfix">
-		{{widget('blogpost', 'blogpost1', {})|raw}}
+	<div class="bk-pt-default">
+	
+		{% include "header.twig" %}
+		
+		<div class="canvas blogpost-page">
+			<div class="main wrapper clearfix">
+				{{widget('blogpost', 'blogpost1', {})|raw}}
+			</div>
+		</div>
+	
 	</div>
-</div>
 
 {% endblock %}

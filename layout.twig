@@ -19,19 +19,13 @@
 
 	<body class="{{ page.backgroundClass }}">
 
-		<div class="bk-pt-default">
+		{% block content %}
+		{% endblock %}
 
-			{% include "header.twig" %}
+		{% include "footer.twig" %}
 
-			{% block content %}
-			{% endblock %}
-
-			{% include "footer.twig" %}
-
-			{% include basekit.bodyScript %}
+		{% include basekit.bodyScript %}
 		
-		</div>
-
 		<script type="text/javascript">
 			!function() {
 				function supportsSVG() {

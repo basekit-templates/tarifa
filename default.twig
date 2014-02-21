@@ -2,10 +2,16 @@
 
 {% block content %}
 
-	<div class="canvas  default-page">
-		<div class="main wrapper clearfix">
-			{{zone('main')|raw}}
+	<div class="bk-pt-default">
+	
+		{% include "header.twig" %}
+	
+		<div class="canvas  default-page">
+			<div class="main wrapper clearfix">
+				{{zone('main')|raw}}
+			</div>
 		</div>
+	
 	</div>
 
 {% endblock %}
