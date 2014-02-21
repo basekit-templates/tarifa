@@ -2,8 +2,10 @@
 
 {% block content %}
 
-	<div class="canvas  default-page">
+	<div class="canvas menu-page">
 		<div class="main wrapper clearfix">
+			{{widget('menusections', 'menusections1', {})|raw}}
+			{{widget('menu', 'menu1', {})|raw}}
 			{{zone('main')|raw}}
 		</div>
 	</div>
