@@ -2,6 +2,7 @@
 	"name":"Tarifa",
 	"thumbnail":"tarifa.png",
 	"screenshot":"tarifa.png",
+	"templateType":"standard",
     "tags": {
     "en": ["minimal", "clean", "photography", "modern", "colorful", "colourful", "flexible", "open", "simple", "travel", "sans-serif", "stylish", "slideshow", "gallery"],
     "es": ["minimalista", "limpio", "fotografico", "moderno", "colorido", "flexible", "abierto", "simple", "vacaciones", "sans-serif", "estilo", "slideshow", "galería"],
