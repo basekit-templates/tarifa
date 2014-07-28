@@ -384,7 +384,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 /* DEFAULT PAGE TYPE */
 
 
-.bk-pt-default .bk-header {
+.bk-header {
     background-color: @color-swatch7;
     padding: 25px 0 18px;
     margin: 0;
@@ -394,7 +394,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 
 /* DEFAULT PAGE - HEADER */
 
- .bk-pt-default .header-wrapper {
+ .header-wrapper {
       position: relative;
       top: 0;
       z-index: 9999;
@@ -406,11 +406,11 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
     }
 
 
-    .bk-pt-default .widget.logo, .bk-pt-default .widget.companyname {
+    .widget.logo, .widget.companyname {
       margin-top: 25px;
     }
 
-    .bk-pt-default .widget.companyheader {
+    .widget.companyheader {
         width: 100%;
         display: block;
         margin: 0 auto;
@@ -544,7 +544,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 
  /* DEFAULT PAGE - NAV */
 
-   .bk-pt-default .widget .extendednavigation {
+   .widget .extendednavigation {
         max-width: 100%;
         position: static;
         display: block;
@@ -579,9 +579,6 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
                   color: @color-swatch6;
               }
             }
-            &:hover.folder {
-              padding-bottom: 0;
-            }
           }
         }
         a.pull {
@@ -606,25 +603,25 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 
  
 
-  .bk-pt-default .widget .extendednavigation ul li:hover .text {
+  .widget .extendednavigation ul li:hover .text {
     color: @font-swatch6-color;
   }
 
 
-  .bk-pt-default .widget .extendednavigation ul li a {
+  .widget .extendednavigation ul li a {
       color: @font-swatch6-color;
       padding: 5px 0;
       margin: 0;
   }
 
-  .bk-pt-default .widget .extendednavigation ul li > ul {
+  .widget .extendednavigation ul li > ul {
       display: none!important;
   }
 
-  .bk-pt-default .widget .extendednavigation ul li:hover > ul {
+  .widget .extendednavigation ul li:hover > ul {
       display: block!important;
       width: 100%;
-      margin: 16px 0 0;
+      margin: 10px 0 0;
       padding: 0;
       background-color: darken(@color-swatch7,3%);
       li {
@@ -638,14 +635,17 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
       }
   }
 
-  .bk-pt-default .widget .extendednavigation ul li.folder {
+  .widget .extendednavigation ul li.folder {
     border-radius: 0;
     .text:hover {
         color: @font-swatch6-color;
     }
+    .text:after {
+	    top: 5px;
+    }
   }
 
-  .bk-pt-default .widget .extendednavigation ul {
+  .widget .extendednavigation ul {
     li:hover > ul li:last-child {
       padding-top: 16px;
     }
@@ -655,7 +655,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
     }
   }
 
-  .bk-pt-default .widget .extendednavigation li:hover ul {
+  .widget .extendednavigation li:hover ul {
       position: relative;
       li a {
         padding-left: 10px;
@@ -2199,7 +2199,7 @@ height: 95px;
       box-shadow: 0 3px 4px hsla(hue(@color-swatch7), saturation(@color-swatch7), lightness(darken(@color-swatch7,30%)), 0.2);
     }
 
-    .bk-pt-default .widget.logo, .bk-pt-default .widget.companyname {
+    .widget.logo, .widget.companyname {
       margin-top: 0;
     }
 
@@ -2401,14 +2401,14 @@ height: 95px;
     padding-left: 10px;
   }
 
-  .bk-pt-home .widget .extendednavigation ul li:hover.folder {
-    padding-bottom: 0;
+  .widget .extendednavigation ul li:hover.folder {
+    padding-bottom: 10px;
     &:after {
       top: 11.2%;
     }
   }
 
-  .bk-pt-default .widget .extendednavigation ul {
+  .widget .extendednavigation ul {
     margin: 30px 0 0;
   }
 
@@ -2685,6 +2685,7 @@ height: 95px;
 @media only screen and (min-width: 1140px) {
     .wrapper {
         width: 90%;
+        max-width: 1200px;
         /* 1140px - 10% for margins */
         margin: 0 auto;
     }
