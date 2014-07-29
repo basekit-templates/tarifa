@@ -19,7 +19,7 @@ a {
     font-family: @font-swatch2-font-family;
     font-size: @font-swatch5-font-size;
     font-weight: @font-swatch5-font-weight;
-    color: @color-swatch4;
+    color: @color-swatch3;
     text-decoration: none;
 }
 
@@ -148,7 +148,8 @@ ul, ol, li {
 input[type=text],
 input[type=email],
 input[type=search],
-textarea {
+textarea,
+select {
 	text-indent: 0;
 	padding: 7px 10px;
 	text-align: left;
@@ -177,7 +178,9 @@ input[type=submit], button, .btn, a.btn,
 .widget.paypalbuynow .widget.button.paypal,
 .widget.tweet a,
 .widget.dropbox .b-wrap .btn,
-.ctc-wrap a {
+.ctc-wrap a,
+.widget.ecomcheckout table tr td .checkout-quantitybtn button,
+.widget.ecombasket .ecombasket-list-container .ecombasket-checkout-wrap .ecombasket-checkout-link {
 	display: inline-block;
 	border: 2px solid @color-swatch5;
 	background: @color-swatch1;
@@ -192,8 +195,21 @@ input[type=submit], button, .btn, a.btn,
 	-webkit-font-smoothing: antialiased;
 	&:hover {
 		outline: none;
+		text-decoration: none;
 		border-color: @color-swatch3;
 	}
+}
+
+button.btn {
+	margin: 0;
+}
+
+.widget.ecomcheckout table tr td .checkout-quantitybtn button {
+	padding: 1px 10px 7px;
+}
+
+.ecombasket-remove-button {
+	color: @color-swatch3;
 }
 
 form {
@@ -261,6 +277,7 @@ form {
 .widget.blogsearch,
 .blog-post-metadata {
 	clear: both;
+	margin-bottom: 10px;
 }
 
 .blog-post-metadata {
@@ -1324,7 +1341,7 @@ hr.line.align-right {
     font-size:@font-swatch5-font-size;
     font-weight: @font-swatch5-font-weight;
     line-height:@font-swatch5-line-height;
-    color:darken(@font-swatch5-color,40%);
+    color: @color-swatch1;
     letter-spacing: @font-swatch5-letter-spacing;
 }
 .widget.gallery li span.inner:hover .title {
@@ -1388,12 +1405,15 @@ hr.line.align-right {
    TWITTER FULL
    =============================== */
 
-.widget.twitter {
+.twitter ul li .twitter-content {
+	> span, time, > span > a {
+		font-size: bkscale(@font-swatch5-font-size, 0.9);
+	}
 }
 
 .widget.twitter a {
    font-family: @font-swatch5-font-family;
-   color: @font-swatch4-color;
+   color: @color-swatch3;
    font-size:@font-swatch5-font-size;
    text-decoration: none;
 }
@@ -1802,7 +1822,7 @@ hr.line.align-right {
 
 .widget.profile .twitter a {
    font-family: @font-swatch5-font-family;
-   color: @color-swatch1;
+   color: @color-swatch3;
    font-size:@font-swatch5-font-size;
    text-decoration: none;
    display: inline;
@@ -1838,7 +1858,7 @@ hr.line.align-right {
 
 .widget.profile .twitter .twitter-content a:hover {
   text-decoration: underline;
-  color: @color-swatch1;
+  color: @color-swatch3;
 }
 
 .widget.profile .twitter-content span a {
@@ -2127,14 +2147,17 @@ hr.line.align-right {
           display: inline-block;
       }
       &.productlist-search {
-          margin: 20px 0;
           width: 100%;
           input {
-            width: auto;
+            //width: auto;
             border: 1px solid darken(@color-swatch2,3%);
           }
       }
   }
+}
+
+.widget.ecombasket .ecombasket-list-container ul li {
+	border-bottom: 1px solid darken(@color-swatch1, 20%);
 }
 
 .widget.ecombasket .ecombasket-list-container ul li .ecombasket-item-image {
@@ -2668,6 +2691,93 @@ height: 95px;
 	      padding-bottom: 50%;
     }
 
+}
+
+// Ecommerce Filter Forms
+.form-group.productlist-search:before {
+	content: "Search";
+	display: inline-block;
+	padding-bottom: .4em;
+}
+
+.form-group.productlist-search {
+	position: relative;
+	float: left;
+	margin: 0 0 20px;
+	input[type=search] {
+		padding-right: 90px;
+		box-sizing: border-box;
+		width: 100%;
+	}
+	button {
+		position: absolute;
+		right: 0;
+		bottom: 10px;
+	}
+}
+
+label {
+	display: inline-block;
+	padding-bottom: .4em;
+}
+
+select {
+	cursor: pointer;
+	position: relative;
+	margin-bottom: 12px;
+	padding-right: 33px;
+}
+
+select, input[type=search] {
+	font-family: @font-swatch5-font-family;
+	font-size: @font-swatch5-font-size;
+	font-weight: @font-swatch5-font-weight;
+	line-height: @font-swatch5-line-height;
+	color: @font-swatch5-color;
+	letter-spacing: @font-swatch5-letter-spacing;
+	text-indent: 0;
+	width: 100%;
+	padding: 8px 10px 10px;
+	outline: none;
+	-webkit-transition: border .2s;
+	-moz-transition: border .2s;
+	-ms-transition: border .2s;
+	transition: border .2s;
+	border-radius: 0;
+	height: 40px;
+}
+
+.productlist-item-count {
+  clear: both;
+}
+
+.productlist-display-form {
+	input[type=search] {
+		margin: 0;
+	}
+	label {
+		display: inline-block;
+		width: 19%;
+	}
+	select {
+		width: 80%;
+	}
+}
+.productlist-display-form .form-group {
+	width: 100%;
+	padding: 0;
+}
+.form-group.productlist-search button {
+	bottom: 0;
+}
+
+
+@media (max-width: 480px) {
+  .productlist-display-form {
+		select, label {
+			width: 100%;
+		}
+	}
 }
 
 /*
