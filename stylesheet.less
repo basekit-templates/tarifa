@@ -453,10 +453,9 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
       min-width: 200px;
       li {
         display: block;
-        padding: 5px;
         a {
           display: block;
-          padding: 4px 20px;
+          padding: 0 20px;
           font-family: @font-swatch6-font-family;
           font-size: @font-swatch6-font-size;
           font-weight: @font-swatch6-font-weight;
@@ -487,7 +486,8 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
     cursor: pointer;
     .text {
       display: block;
-      padding: 4px 30px 4px 20px;
+      padding-right: 30px;
+      padding-left: 20px;
       font-family: @font-swatch6-font-family;
       font-size: @font-swatch6-font-size;
       font-weight: @font-swatch6-font-weight;
@@ -568,7 +568,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
           border: none;
           li {
             border-bottom: 1px dotted darken(@color-swatch7,5%);
-            padding: 10px 0;
+            padding: 0;
             display: inline-block;
             width: 100%;
             &:first-child {
@@ -578,7 +578,6 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
               border-bottom: 1px dotted darken(@color-swatch7,5%);
             }
             &.folder .text {
-              padding: 5px 25px 5px 0;
               &:after {
                   content: "\25BC";
                   font-size: 7px;
@@ -590,6 +589,11 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
                   color: @color-swatch6;
               }
             }
+          }
+          .text {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            display: inline-block;
           }
         }
         a.pull {
@@ -621,7 +625,6 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 
   .widget .extendednavigation ul li a {
       color: @font-swatch6-color;
-      padding: 5px 0;
       margin: 0;
   }
 
@@ -632,7 +635,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
   .widget .extendednavigation ul li:hover > ul {
       display: block!important;
       width: 100%;
-      margin: 10px 0 0;
+      margin: 0 0 0;
       padding: 0;
       background-color: darken(@color-swatch7,3%);
       li {
@@ -657,11 +660,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
   }
 
   .widget .extendednavigation ul {
-    li:hover > ul li:last-child {
-      padding-top: 16px;
-    }
     li:hover > ul li:first-child {
-      padding-top: 16px;
       border-top: none;
     }
   }
@@ -2321,7 +2320,7 @@ height: 95px;
     border: none;
     padding-top: 70px;
     li {
-      padding: 10px 0;
+      padding: 0;
       &:hover ul {
         position: relative;
         margin: 0;
@@ -2367,7 +2366,6 @@ height: 95px;
 
   .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
       color: @font-swatch6-color;
-      padding: 5px 0;
       margin: 0;
   }
 
@@ -2382,7 +2380,7 @@ height: 95px;
   .widget.extendednavigation ul li:hover > ul {
       display: block!important;
       width: 100%;
-      margin: 16px 0 0;
+      margin: 0;
       padding: 0;
       background-color: hsla(hue(@color-swatch7), saturation(@color-swatch7), lightness(lighten(@color-swatch7,10%)), 0.4);
       position: relative;
