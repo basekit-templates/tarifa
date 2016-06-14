@@ -1,7 +1,7 @@
 {
 	"name":"Tarifa",
 	"thumbnail":"tarifa.png",
-	"screenshot":"tarifa.png",
+	"screenshot":"tarifa-screenshot.jpg",
 	"templateType":"standard",
     "pageTypes":["home"],
     "tags": {
