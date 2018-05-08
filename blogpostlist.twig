@@ -3,15 +3,15 @@
 {% block content %}
 
 	<div class="bk-pt-default">
-	
+
 		{% include "header.twig" %}
-		
+
 		<div class="canvas bloglist-page">
 			<div class="main wrapper clearfix">
-				{{widget('blogpostlist', 'blogpostlist1', {})|raw}}
+				{{zone('main')|raw}}
 			</div>
 		</div>
-		
+
 	</div>
 
 {% endblock %}
