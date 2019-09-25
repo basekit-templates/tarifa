@@ -1,5 +1,6 @@
 {
 	"name":"Tarifa",
+	"versionTenCompatible": 1,
 	"thumbnail":"tarifa.png",
 	"screenshot":"tarifa-screenshot.jpg",
 	"templateType":"standard",
