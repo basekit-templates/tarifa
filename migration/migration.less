@@ -35,7 +35,7 @@
 
 
   // Replace with corresponding template values
-  @container-width: 1080px;
+  @container-width: 1200px;
 
   @spacing__first--desktop: 40px;
   @spacing__first--tablet:  30px;
@@ -111,10 +111,9 @@
 
   // Adds spacing to the section when a widget is before it
   #page-zones__main > .widget:not(.row) + .row {
-    margin-bottom: @spacing--other;
     margin-top: @spacing--other;
 
-    &:not(:last-child) {
+    &:last-child {
          margin-bottom: 0;
     }
   }
